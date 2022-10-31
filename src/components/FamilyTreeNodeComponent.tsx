@@ -19,7 +19,7 @@ export const FamilyTreeNodeComponent = ({
       {familyTreeNode?.children?.map((c) => (
         <div
           style={{
-            width: "100px",
+            width: "110px",
           }}
         >
           <FamilyTreeNodeComponent familyTreeNode={c} key={familyTreeNode.id} />

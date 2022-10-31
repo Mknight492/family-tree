@@ -1,6 +1,5 @@
 * {
   padding: 0px;
-  margin: 0px;
   list-style: none;
   box-sizing: border-box;
 }
@@ -9,6 +8,7 @@
   width: 100px;
   border: 2px solid black;
   margin: 10px auto;
+  padding: 0 10px;
   text-align: center;
   overflow: visible;
 }
@@ -18,16 +18,14 @@
   flex-wrap: nowrap;
   justify-content: center;
   flex-direction: row;
-  flex-shrink: 0;
-  flex-grow: 0;
   width: 100%;
   position: relative;
 }
 
 .node.male{
-  background:  blue;
+  background:  #ADD8E6;
 }
 
 .node.female{
-  background:  pink;
+  background:  #FFB6C1;
 }
