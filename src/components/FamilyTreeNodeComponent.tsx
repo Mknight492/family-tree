@@ -2,27 +2,23 @@ import React from "react";
 import { IFamilyTreeNode } from "../data/type";
 
 export const FamilyTreeNodeComponent = ({
-  familyTreeNode,
+  familyTreeNode: { gender, name, partner, children, id },
 }: {
   familyTreeNode: IFamilyTreeNode;
 }) => (
   <>
-    <li className={"node " + familyTreeNode.gender}>{familyTreeNode.name}</li>
+    <li className={"node " + gender}>{name}</li>
 
-    {familyTreeNode?.partner && (
-      <li className={"node " + familyTreeNode.partner.gender}>
-        {familyTreeNode.partner.name}
-      </li>
-    )}
+    {partner && <li className={"node " + partner.gender}>{partner.name}</li>}
 
     <ul className="nodelist">
-      {familyTreeNode?.children?.map((c) => (
+      {children?.map((childNode) => (
         <div
           style={{
             width: "110px",
           }}
         >
-          <FamilyTreeNodeComponent familyTreeNode={c} key={familyTreeNode.id} />
+          <FamilyTreeNodeComponent familyTreeNode={childNode} key={id} />
         </div>
       ))}
     </ul>

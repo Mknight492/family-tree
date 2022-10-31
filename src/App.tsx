@@ -17,7 +17,7 @@ import { FamilyTreeNodeComponent } from "./components/FamilyTreeNodeComponent";
 //
 //3. team is writing code in a functional style - I wouldn't actually normally write like this but you asked for some functional programming techniques so
 
-const familyTreeDenormalised = denormaliseFamilyTree(familyTree)
+const familyTreeDenormalised = denormaliseFamilyTree(familyTree);
 
 function App() {
   return (
